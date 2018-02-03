@@ -6,9 +6,52 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color:lightgoldenrodyellow;">
+  <ion-row justify-content-between>
+    <ion-col [navPush]="test1Pg" style="background-color:aliceblue; border: 2px solid navy; box-shadow: 5px 10px #888888;">
+      <h1>Test 1</h1>
+      <p>
+        This test shows a page with an &lt;ion-slides&gt; control. The control
+        has 2 single normal slides, each of which is a custom component.
+        Then there is a call to third custom control which is another &lt;ion-slides&gt; control
+        with 2 slides in it. So, the page should swipe like their are 4 slides.
+      </p>
+      <h4>
+        Outcome
+      </h4>
+      <p style="font-style:italic">
+        The 4 slides appear. However, the 2 slides which are in one custom control
+        are strangely offset making it unusable. You can see them both after VERY
+        exagerated swiping.
+      </p>
+    </ion-col>
+    <ion-col style="max-width: 3vw;">&nbsp;</ion-col>
+    <ion-col [navPush]="test2Pg" style="background-color:aliceblue; border: 2px solid navy; box-shadow: 5px 10px #888888;">
+      <h1>Test 2</h1>
+      <p>
+        This test shows a page with an &lt;ion-slides&gt; control. The control
+        has 2 single normal slides, each of which is a custom component.
+        Then there is a call to third custom control which has 2 &lt;ion-slide&gt; components in it,
+        NOT within an &lt;ion-slides&gt; component. So, the page should swipe like their are 4 slides.
+      </p>
+      <h4>
+        Outcome
+      </h4>
+      <p style="font-style:italic">
+        3 of 4 slides appear. The first two, which are each independent components, and the 1st
+        slide of the next custom component which contains 2 &lt;ion-slide&gt; components in it. The
+        second slide doesn&quot;t render at all.
+      </p>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 10px;">
+    <ion-col>
+      <h2>Desired Outcome</h2>
+      <p>Ideally I get a working page with a custom component then can be multiple slides.
+         I want to be able build a custom slideshow made with reusable subsets of slides. Like building
+         a master process from sub-processes. You should be able to swipe back and forth between
+         all slides as expected.
+      </p>
+    </ion-col>
+  </ion-row>
 </ion-content>
