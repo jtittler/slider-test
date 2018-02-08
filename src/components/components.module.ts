@@ -7,17 +7,17 @@ import { IonicModule } from 'ionic-angular';
 
 @NgModule({
 	declarations: [
-    ProcessOneComponent,
-    ProcessTwoComponent,
-    ProcessThreeComponent,
-    ProcessFourComponent
+    // ProcessOneComponent,
+    // ProcessTwoComponent,
+    // ProcessThreeComponent,
+    // ProcessFourComponent
   ],
   imports: [IonicModule],
 	exports: [
-    ProcessOneComponent,
-    ProcessTwoComponent,
-    ProcessThreeComponent,
-    ProcessFourComponent
+    // ProcessOneComponent,
+    // ProcessTwoComponent,
+    // ProcessThreeComponent,
+    // ProcessFourComponent
   ]
 })
 export class ComponentsModule {}
